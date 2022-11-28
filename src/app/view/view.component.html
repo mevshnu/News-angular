@@ -4,16 +4,22 @@
             <div class="row g-3 mt-4">
                 <div *ngFor="let i of data" class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3">
                     <div class="card"  style="width: 18rem;">
-                        <img src="{{i.url}}" class="card-img-top" alt="...">
-                        <div class="card-body">
+                        <img  src="{{i.urlToImage}}" class="card-img-top" alt="...">
+                        <div style="height: 200px;" class="card-body">
                           <h5 class="card-title">{{i.title}}</h5>
                           <p class="card-text">{{i.publishedAt}}</p>
                         </div>
-                        <ul class="list-group list-group-flush">
+                        <ul  class="list-group list-group-flush">
+                            
+                            
+                            <li class="list-group-item">{{i.description}}</li>   
+                           <details>
+                            <li class="list-group-item">{{i.author}}</li>
                             <li class="list-group-item">{{i.source.id}}</li>
                             <li class="list-group-item">{{i.source.name}}</li>
-                            <li class="list-group-item">{{i.author}}</li>
-                          <li class="list-group-item">{{i.description}}</li>                          <li class="list-group-item">{{i.content}}</li>
+                            <li class="list-group-item">{{i.content}}</li>
+
+                           </details>
                           
 
 
